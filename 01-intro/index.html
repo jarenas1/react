@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactApp</title>
+</head>
+<body>
+
+     <!-- debemos indicar donde vamos a renderizar el componente que creamos  -->
+
+    <div id="root"></div>   <!--Creamos este div con el id root para decirle a react que se renderice en este--> 
+    
+
+
+    <Script type="text/babel">
+
+        //POR QUE LLAMAMOS BABEL?
+        //BABEL NOS PERMITE USAR CARACTERISTICAS ACTUALES Y NUEVAS DE JS Y USAR ESTAS CARACTERISTICAS EN NAVEGADORES QUE AUN N CORREN ESTO, ESA ES LA RAZON POR LA QUE SE USAR.  -->
+
+
+        const divRoot = document.getElementById("root"); //llamamos el elemento creado por medio de su id
+
+        const h1Tag = <h1>Hola sapitas</h1>;   //no es obligatorio el ; pero es buena practica usarlo
+
+        ReactDOM.render(h1Tag,divRoot); //INDICAMOS PRIMERO EL ELEMENTO A INSERTAR Y LUEGO EL LUGAR DONDE SE VA A INSERTAR
+
+
+
+
+        //VAMOS A HACER QUE SALUDE A JUAN
+        const name = 'jesus'
+        const saludo = <h2>Hola {name}!</h2>; //DENTRO DE LAS LLAVES SE PUEDE COLOCAR CODIGO DE JS, EN ESTE CASO LLAMAMOS LA CONSTANTE CON EL NOMBRE
+        ReactDOM.render(saludo, divRoot);  //LO INSERTAMOS EN EL ROOT
+
+    </Script>
+    <!-- LLAMAMOS A REACT -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</body>
+</html>
