@@ -1,0 +1,2 @@
+Para iniciar el proyecto de react(como vite) y que funcione con nmp, vamos a poner el siguiente comando en la consola npx create-react-app NOMBRE
+este va a iniciar el ´royecto y nos va a crear todas las carpetas, podemos iniciar el proyecto usando npm start y para cancelarlo usamos ctrl + c
