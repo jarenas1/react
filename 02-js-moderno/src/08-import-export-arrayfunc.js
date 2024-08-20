@@ -18,7 +18,7 @@ const findById = (id)=> {
 
 //FORMA CORTA USANDO LO VISTO EN ARROW FUCTIONS
 
-const findByIdCorto = (id)=> heroes.find((heroe) =>heroe.id == id); //ESTO VA A DEVOLVER TRUE O FALSE, POR ENDE NO HACE FALTA CONDICIONALES NI NADA
+export const findByIdCorto = (id)=> heroes.find((heroe) =>heroe.id == id); //ESTO VA A DEVOLVER TRUE O FALSE, POR ENDE NO HACE FALTA CONDICIONALES NI NADA
 
 
 
