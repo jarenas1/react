@@ -29,19 +29,23 @@ getImage().then(console.log());
     // }).catch(console.warn)
 
     const getImg = async()=>{
-        const KEY = "B8CCn0z3GozjaaX7cJY5yXeuezDpI2RP";
-        const peticion = await fetch(`https://api.giphy.com/v1/gifs/random?api_key=${KEY}`)
-        const {data} = await peticion.json();
-
-        const {url} = data.images.original;
-
-        console.log(url);
-
-        const img = document.createElement('img');
-        img.src = url;
+        try{ const KEY = "B8CCn0z3GozjaaX7cJY5yXeuezDpI2RP";
+            const peticion = await fetch(`https://api.giphy.com/v1/gifs/random?api_key=${KEY}`)
+            const {data} = await peticion.json();
     
-        document.body.append(img);
+            const {url} = data.images.original;
+    
+            console.log(url);
+    
+            const img = document.createElement('img');
+            img.src = url;
         
+            document.body.append(img);
+        }catch(error){
+            console.error("Hubo un error", error);
+        }
     }
+
+    //TAMBIEN DEBEMOS MANEJAR ERRORES, USANDO EL TRYCATCH COMO SE VE ARRIBA
 
 
