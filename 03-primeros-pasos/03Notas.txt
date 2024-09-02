@@ -1,0 +1,30 @@
+COMPONENTE
+
+Es como dividimos una aplicación, por partes reutilizables
+
+Por ejemplo un navbar es un componente
+
+Estos tienen estado, esto quiere decir, cuando cargams la pagina la navbar tiene un estado inicial, pero a medida que interactuamos con esta este estado puede ir cambiando
+
+
+---------------------------------------------------------------------------
+Crear un nuevo proyecto con vite:
+
+yarn create vite
+
+seleccionamos react
+
+Seleccionamos js como lenguaje
+
+escribimos yarn para que se ejecuten las dependencias
+
+yarn dev lo ejecuta en el localhost
+
+Yarn es un simil de npm
+
+------------------------------------------------------------
+
+JSX, se usa igual que en astro
+
+Si deseamos usar npm en vez de yarn, debemos borrar yarn y hacer el npm intstall
+
