@@ -58,13 +58,14 @@ const getName = (name) =>{
 
 
 //FORMA CON EL FRAGMENT Y LAS VARIABLES
-export const FirstApp = ()=>{
+export const FirstApp = ({title})=>{ //PASAMOS LOS ATRIBUTOS QUE RECIBIRA
     return(
         <>
             <h1>{numbers}</h1> 
             <p>{name}</p>
             <p>{message.greeting}</p>
             <p>{getName("PEDRO")}</p>
+            <p>{title}</p> 
         </>
     )
 }

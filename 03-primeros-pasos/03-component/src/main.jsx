@@ -3,6 +3,10 @@ import ReactDOM from "react-dom/client";
 //IMPORTO LA FUNCION
 import { App , FirstApp} from "./HelloWorldApp";
 
+//LLAMAMOS AL CSS QUE SE APLICARA A TODO LO QUE EL MAIN RENDERICE
+import './styles.css';
+
+
 //RENDERIZAMOS EN UN ELEMENTO CON ID ROOT
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -14,6 +18,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-        <FirstApp /> {/* LLAMADA A LA FUNCION APP */}
+        <FirstApp title = "props soy un props" /> {/* LLAMADA A LA FUNCION APP Y PASAMOS VALOR DE ATRIBUTOS*/}
     </React.StrictMode>
 )

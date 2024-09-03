@@ -24,7 +24,51 @@ Yarn es un simil de npm
 
 ------------------------------------------------------------
 
-JSX, se usa igual que en astro
+JSX, se usa similar que en astro, solo que no debemos usar llaves para crear elementos html
+
+
+Inicialmente importamos las cosas necesarias para renderizar la app
 
 Si deseamos usar npm en vez de yarn, debemos borrar yarn y hacer el npm intstall
+
+
+----------------------------------------------------------------------
+
+Primer componente: MAS CONOCIDO COMO FUNCTIONAL COMPONENT
+
+1. Creamos un archivo jsx, este va a ser el archivo de entrada, le ponemos el nombre que asigne que será el principal componente
+
+3. importamos la función creada en este archivo a el archivo main que se encargara de renderizar
+
+
+-----------------------------------------------------------------------
+NODOS:
+
+Si deseamos retornar varios elementos HTML, como un h1 y un p, debemos envolverlos en un nodo, para poder devolverlos, por ejemplo un div
+
+Para evitar tener que crear más elementos HTML, existe el fragment, el cual se debe importar de react
+
+TAMBIEN LA FORMA OPTIMA PARA REALIZAR ESTO ES, ENVOLVIENDO LOS ELEMENTOS HTML EN TAGS VACIOS, YA QUE REACT INFERIRA QUE ES UN FRAGMENT
+
+
+-------------------------------------------------------------------------
+IMPRESION DE VARIABLES JS EN EL HTML
+
+Para esto debemos meter dentro de la etiqueta HTML unas llaves {}, debemos tener en cuenta que no podemos imprmir OBJETOS NI BOOLEANS. Para poder imprimir un objeto debemos acceder al nombre de cada propiedad con el .
+
+Por el contrario si podemos imprimir arrays, y lo que va a hacer react es imprmiri ELEMENTO POR ELEMENTO COMO SI ESTUVIERA ITERANDOLO
+
+---------------------------------------------------------------------
+
+CREAR VARIABLES DENTRO DEL FUNCTIONAL COMPONENT:
+
+Esto no esta bien ya que cada que el componente se renderice, se cargaran nuevamente estas variables, por ende es mejor dejarlas por fuera
+
+
+
+----------------------------------------------------------------------
+
+USAR ESTILOS GLOBALES CSS:
+
+Debemos crear un archivo con todos los estilos, después lo que haremos será llamarlo en el main.jsx que es donde todo se está renderzando, para que a todo lo que se renderice se aploque
 
