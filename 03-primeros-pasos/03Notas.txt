@@ -112,3 +112,20 @@ Esto nos permite dar valores predeterminados a los props en caso de que no se en
 
 
 
+
+-----------------------------------------------------------------------
+
+EVENTOS
+
+
+CLICK
+Los eventos se asignan en el functional component, en la etiqueta del elemento que queremos que se aplique un evento, por ejemplo el evento de click, se llama onClick = {codigoJS}  Y ya llamamos dentro de las llaves todo el js que queramos
+
+
+---------------------------------------------------------------------
+
+USESTATE
+
+Esto funciona de la siguiente manera, si react mostro algo en pantalla, y por ejemplo tenemos un botón, que lo que va a hacer es modificar eso que se mostro inicialmente, cuando presionamos el botón no se cambiara lo que está impreso inicialmente en pantalla, ya que fue algo que ya se imprimio y solo se está modificando la variable, por ende debemos usar el UseState
+
+Este es un hook, por lo que debemos Importarlo como se importan todos los hooks, desde react
