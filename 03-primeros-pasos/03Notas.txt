@@ -104,4 +104,11 @@ Esto indica el tipo de dato que debe ser, si deseamos que sea obligatorio, aimpl
 Cada cosita va separada por, igual que un objeto js
 
 
+----------------------------------------------------------------------
+
+DEFAULTPROPS 
+
+Esto nos permite dar valores predeterminados a los props en caso de que no se envíen por parte del padre, evitando así tener que darle el valor en los paréntesis del functional component con el =,   se hace igual que el proptypes, pero se pone es .defaultProps
+
+
 

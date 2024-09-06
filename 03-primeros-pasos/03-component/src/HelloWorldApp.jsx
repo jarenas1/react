@@ -70,3 +70,17 @@ export const FirstApp = ({title})=>{ //PASAMOS LOS ATRIBUTOS QUE RECIBIRA
         </>
     )
 }
+
+//INDICAR TIPO Y SI ES REQUERIDO EN LOS PROPS TITLE:
+
+FirstApp.propTypes = {
+    title: PropTypes.string.isRequired, //title debe recibir obligatoriamente un String
+}
+
+//INDICAR VALOR POR DEFECTO A UNOS PROPS
+
+FirstApp.defaultProps = {
+    title: "Default Title", //Si no se pasa ningun title, se usará este Y NO SE USARA EL ERROR CREADO ARRIBA
+}
+
+//PROPS Y STATES:
