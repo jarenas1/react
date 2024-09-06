@@ -1,4 +1,5 @@
 import { Fragment } from "react"
+import PropTypes from "prop-types"
 //CREACION DE LA FUNCION QUE IMPRIME HELLO WORLD
 
 export function App(){

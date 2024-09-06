@@ -72,3 +72,36 @@ USAR ESTILOS GLOBALES CSS:
 
 Debemos crear un archivo con todos los estilos, después lo que haremos será llamarlo en el main.jsx que es donde todo se está renderzando, para que a todo lo que se renderice se aploque
 
+
+
+-----------------------------------------------------------------------
+
+COMUNICACION ENTRE COMPONENTES (PROPS)
+
+Esto es el mismo concepto de pasarle atributos  una función, se le pasan desde el padre, se recibe y se muestra dentro de una etiqueta HTML usando llaves, tener en cuenta que los atributos del functional component se declaran dentro de unas llaves
+
+El elemento padre seria el main.jsx, más específicamente y se envían dentro de la etiqueta HTML donde se llama al functional component, se envían poniendo el nombre del atributo declarado e igualándolo a su valor
+
+
+--------------------------------------------------------------------
+
+PROPTYPES
+
+1. Desacrgamos: yarn add prop-types
+
+2. Importamos PropTypes from "prop-types"
+
+
+Esto se usa con el fin de añadirle a cada componente, Lo que debe recibir como props, el tipo y si puede ser o no nulo.
+
+Para poder hacer esto creamos como una especia de objeto, el cual se nombre com NombeFunctionComponent.PropTypes{}
+
+
+Dentro de las llaves ponemos el nombre del prop:PropTypes.tipoVar
+
+Esto indica el tipo de dato que debe ser, si deseamos que sea obligatorio, aimplemente ponemos después del tipoDeVariable .isRequired
+
+Cada cosita va separada por, igual que un objeto js
+
+
+
