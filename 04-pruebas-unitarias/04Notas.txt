@@ -1,0 +1,47 @@
+Hay 2 tipos de pruebas:
+
+Unitarias: Se enfocan en pequeñas funcionalidades de la aplicación
+
+integración, se enfoca en como funcionan varias funcionalidades de la aplicación en conjunto
+
+--------------------------------------------------------------------
+
+INSTALACION DE JEST
+
+Jest es el que nos ayudara a realizar pruebas, para instalarlo vamos a la pagina y seguimos su paso a paso
+
+
+Luego en el package.json, en la parte de scripts añadimos "test":"jest --watchAll"
+
+Y por ultimo aplicamos esto con yarn test o npm run test cuando ya tengamos nuestra primera prueba
+
+
+------------------------------------------------------------------------
+
+Crear una prueba
+
+Creamos la carpeta test y metemos todos los archivos de src
+
+Dentro de esta, también cremos archivos name.test.js
+
+En esos archivos debemos tener lo siguiente:
+
+1. Un titulo el cual se indica test(name) =>{codigo}
+ 
+
+---------------------------------------------------------------------
+
+TOBE
+
+En las pruebas tenemos 3 pasos, inicialización, estimulo y observación
+
+Para probar algo en la observación usamos expect, que nos va a dejar seleccionar algo por asi decirlo
+
+Para decir si algo es igual a otra cosa, luego del spect ponemos .toBe(variable2)
+SI ESTO NO SE CUMPLE LA PRUEBA NO PASA
+
+
+
+!!!!PARA AYUDARNOS A AUTOCOMPLETAR ESTAS COSAS DE JEST, PODEMOS INSTALAR yarn add -D @types/jest
+
+También podríamos meter una serie de pruebas en una especie de paquete, el cual indique de donde vienen esas pruebas o de que se trata, esto se hace escribiendo describe(nameee () =>{ ACA IRIA CADA PRUEBA}
