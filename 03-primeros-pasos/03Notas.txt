@@ -129,3 +129,5 @@ USESTATE
 Esto funciona de la siguiente manera, si react mostro algo en pantalla, y por ejemplo tenemos un botón, que lo que va a hacer es modificar eso que se mostro inicialmente, cuando presionamos el botón no se cambiara lo que está impreso inicialmente en pantalla, ya que fue algo que ya se imprimio y solo se está modificando la variable, por ende debemos usar el UseState
 
 Este es un hook, por lo que debemos Importarlo como se importan todos los hooks, desde react
+
+y se basa en crear una constante que contenga un array, este array va a contener un valor y otor que modificara este primer valor, esto se iguala al hook y dentro de los paréntesis del hook va el valor que tomara el primer valor del array, ahora si deseamos aumentar el primer valor del array simplemente llamamos al segundo y dentro de los paréntesis lo modificamos, AUTOMATICAMENTE SE RENDERIZARA
