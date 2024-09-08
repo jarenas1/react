@@ -16,15 +16,15 @@ import './styles.css';
 // )
 
 
-// ReactDOM.createRoot(document.getElementById("root")).render(
-//     <React.StrictMode>
-//         <FirstApp title = "props soy un props" /> {/* LLAMADA A LA FUNCION APP Y PASAMOS VALOR DE ATRIBUTOS*/}
-//     </React.StrictMode>
-// )
-
-
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-        <CounterApp value = {123} /> {/* LLAMADA A LA FUNCION APP Y PASAMOS VALOR DE ATRIBUTOS*/}
+        <FirstApp title = "props soy un props" /> {/* LLAMADA A LA FUNCION APP Y PASAMOS VALOR DE ATRIBUTOS*/}
     </React.StrictMode>
 )
+
+
+// ReactDOM.createRoot(document.getElementById("root")).render(
+//     <React.StrictMode>
+//         <CounterApp value = {123} /> {/* LLAMADA A LA FUNCION APP Y PASAMOS VALOR DE ATRIBUTOS*/}
+//     </React.StrictMode>
+// )
