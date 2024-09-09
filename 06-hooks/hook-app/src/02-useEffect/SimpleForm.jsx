@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Message } from './Message'
 
 export const SimpleForm = () => {
 
@@ -38,7 +39,12 @@ export const SimpleForm = () => {
 
         <input type="email" className='form-control mt-3'  placeholder='email' name='email' value={email} onChange={(event)=>onChange(event)}/>
 
-        /{/*SE LLAMA LA MISMA FUNCION EN AMBOS IMPUTS YA QUE EL EVENTO TAMBIEN CONTIENE INFORMACION DEL NOMBRE DEL INPUT AL CUAL PERTENECE */}
+        {
+           (username === "juan1") && <Message/> 
+        }
+        {/*SE LLAMA LA MISMA FUNCION EN AMBOS IMPUTS YA QUE EL EVENTO TAMBIEN CONTIENE INFORMACION DEL NOMBRE DEL INPUT AL CUAL PERTENECE */}
+        
+        
     </>
   )
 }
