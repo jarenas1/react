@@ -32,5 +32,3 @@ export const AddCategory = ({onNewCategory}) => {
   //Y LE PASAMOS EL EVENTO   !!!!EXPLICACION DEL INPUT
   
 }
-
- 
