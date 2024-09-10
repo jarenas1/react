@@ -1,0 +1,46 @@
+PROFUNCIZAR HOOKS
+
+Instalar Boostrap: Solo tomamos el enlace de los styles y se pega en el index
+
+
+1. useState: En este dentro de los paréntesis del useState debemos asignar un valor para la primera variable del arreglo, ya que la segunda se usa para modificar el primero, pero, En estos paréntesis no solo se reciben valores primitivos, si no también objetos y esas cosas raritas
+
+Cuando deseamos modificar el valor de un objeto por medio del useState todo el objeto se vera alterado, por eso debemos llamar todo el objeto en la modificación y solo modificar el valor deseado, se puede quemar o usar el spread operator
+
+
+CUSTOM HOOK
+
+un hook no es mas que una función, asi que si deseamos crearo un hook debemos crear un archivo .js, el cual debe comenzar si nombre por use, Acá simplemente creamos una lógica dentro de una función
+
+Tener en cuenta que casi siempre nuestros custom Hooks llevan hooks de react por dentro
+
+En nuestro caso tenemos un hook personalizado, el cual esta devolviendo un valor por medio de un useState, pero en el componente en el cual se esta usando nuestro hooks hay elementos que van a modificar este valor, por ende necesitaríamos pasarle al componente desde el hook la forma de modificar el valor que se esta retornando del useState, en este caso el setCounter
+
+Vamos a crear en el hook varias funciones, las cuales se encarguen de modificar el contador, y luego retornamos estas funciones dentro de un objeto o llaves para que puedan ser activadas en el componente
+
+NOTA: los custom hooks, por lo general devuelven varias cosas, funciones y otras cosas, por lo que debemos devolver un objeto u array con todas estas cosas
+
+Cuando debemos pasarle algo a un custom Hook, desde un evento, este por defecto va a devolver el evento, asi que si deseamos pasar un parámetro diferente debemos crear la arroy function y dentro pasar lo que se desea pasar
+
+
+Si tenemos varios inputs, debemos aplicar el useState a estos para poderlos modificar, entonces es importante que nosotros tomemos los nombres asignados en cada input por medio de el evento, recordemos que el evento, puede traer el nombre y una serie de atributos, los cuales podemos desestructurar.
+
+Ya en la función que designemos para Modificar el useState, la utilizamos
+
+
+USEEFECT:
+
+El useEffect, se renderiza cada que algo suceda, ese algo se indica como una dependencia del mismo, las dependencias van dentro de un array, si mandamos el array vacio significa que solo se lanzara cuando el componente que lo contiene se renderice
+
+Si pasamos algo en el array, se lanzara el useEffect,cada que eso que pasamos se modifique, por ejemplo podemos pasar una variable de un useState
+
+SE RECOMIENDA USAR EL USEEFFECT SOLO PARA CUMPLIR UNA COSA
+
+
+El useEffect, también devuelve cosas, Entonces si por ejemplo tenemos el paréntesis vacio, es decir, que solo se renderice con la renderización del componente, si ponemos adentro un return, este será completamente funcional y cuando el elemento se elimine se mostrara
+
+
+
+HACER UN IF CUANDO ESTAMOS DENTRO DE JSX  (username === "juan1") && <Message/> 
+
+Con el return del use effect podemos hacer muchas cosas, por ejemplo hacer que un evento se abra con la renderización del componente y cuando el componente se borre, que se cierre el evento para evitar fugas de memoria
