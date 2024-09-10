@@ -44,3 +44,6 @@ El useEffect, también devuelve cosas, Entonces si por ejemplo tenemos el parén
 HACER UN IF CUANDO ESTAMOS DENTRO DE JSX  (username === "juan1") && <Message/> 
 
 Con el return del use effect podemos hacer muchas cosas, por ejemplo hacer que un evento se abra con la renderización del componente y cuando el componente se borre, que se cierre el evento para evitar fugas de memoria
+
+
+CUSTOMHOOK PARA MANEJAR UN FORMULARIO

@@ -20,12 +20,15 @@ export const FormWithCustom = () => {
     //     setForm({...form, [name]: value}) //SETEAMOS EL NUEVO VALOR AL FORM,  los corchetes nos permiten indicar que la llave del objeto a modificar va a ser variable
     // } 
 
-    const {form, onChange} = useForm({
+    const {form, onChange, setForm} = useForm({
         username: '',
         email: '',
         password :''
     })
 
+    const onCliclReset = ()=>{
+        setForm({username: "",email: "",password:""})
+    }
     const {username, email, password} = form
 
     return (
@@ -38,12 +41,7 @@ export const FormWithCustom = () => {
 
         <input type="password" className='form-control mt-3'  placeholder='email' name='password' value={password} onChange={(event)=>onChange(event)}/>
 
-        {
-           (username === "juan1") && <Message/> 
-        }
-        {/*SE LLAMA LA MISMA FUNCION EN AMBOS IMPUTS YA QUE EL EVENTO TAMBIEN CONTIENE INFORMACION DEL NOMBRE DEL INPUT AL CUAL PERTENECE */}
-        
-        
+        <button onClick={onCliclReset}  className='btn btn-primary mt-2'>Reset</button>
     </>
   )
 }

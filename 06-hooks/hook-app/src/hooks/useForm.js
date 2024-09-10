@@ -19,6 +19,7 @@ export const useForm = (initialForm = {}) => { //SE  CREA PARA QUE SE PUEDA RECI
     } 
     return {
         form,
-        onChange
+        onChange,
+        setForm
     }
 }
