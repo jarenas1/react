@@ -6,9 +6,10 @@ import CounterApp from './01-useState/CounterApp.jsx'
 import { CounterCustomHook } from './01-useState/CounterCustomHook.jsx'
 import { SimpleForm } from './02-useEffect/SimpleForm.jsx'
 import { FormWithCustom } from './02-useEffect/FormWithCustom.jsx'
+import { MultipleCustomHooks } from './03-examples/MultipleCustomHooks.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <FormWithCustom />
+    <MultipleCustomHooks/>
   </StrictMode>,
 )

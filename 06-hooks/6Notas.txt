@@ -47,3 +47,20 @@ Con el return del use effect podemos hacer muchas cosas, por ejemplo hacer que u
 
 
 CUSTOMHOOK PARA MANEJAR UN FORMULARIO
+
+En este vamos a añadir todo lo que es la lógica del manejo del formulario, manejando un useState, dentro de este y no dentro del formulario, aca crearemos un return del formulario, de la función de cuando cambia y retornaremos el set form
+
+
+
+USEFETCH:
+
+Un componente se renderiza por muchas razones, las cuales también pueden ser externas a el, por ejemplo si el padre manda un prop o algo asi, por ende si estamos haciendo una petición http, dentro de un componente, cada que se renderice el componente, se volverá a crear desde 0 la petición http, por ende es bueno hace las peticiones htttp, creando un custom hook
+
+Dentro de este vamos a reliazr el manejo de errores, Una url personalizada, el estado de loading etc etc
+
+
+
+
+NOTAAA!!!!!
+
+SI HACEMOS UNA PETICION HTTP, Y SEDEAMOS MOSTRAR EN PANTALLA EL NOMBRE DEL POKEMON VA A SALIR UN ERROR, YA QUE LA PETICION SE DEMORA EN LLEGAR, POR L QUE NOS PODEMOS APOYAR DEL OPERADOR TERNARIO PARA QUE VERIFIQUEMOS TODO ANTES DE PEGAR EL VALOR, EJEMPLOOOOO   pokemons?.name 
