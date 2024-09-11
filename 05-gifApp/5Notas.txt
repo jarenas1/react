@@ -1,0 +1,47 @@
+COMUNICACION ENTRE COMPONENTES:
+
+Deseamos pasar el resultado del input, el cual esta guradado en el useState A la lista
+
+Para esto pasamos como atributo el set category, y en el otro lado simplemente, lo destructuramos con llaves y en la función del evento con submit, llamamos, y hacemos un callback, de las categorías y simplemente le asignamos el nuevo valor
+
+---------------------------------------------------------
+
+USEEFFECT HOOK:
+
+Este hook lo que nos permite es lanzar efectos secundarios cuando algo suceda, ejemplo, hacer tal cosa cuando se renderice el componente por primera vez, ESTO SE HACE PONIENDO EL ARRAY VACIO SEPARADO CON UNA ,
+
+
+----------------------------------------------------------
+
+PONER CLASES CSS EN EL JSX
+
+Se añaden común y corriente en la etiqueta HTML, PERO, No se ponen con class, se deben poner con className="name"
+
+
+TIPPPP:
+
+Si debemos pasar un objeto como prop a un componente, podemos realizar la desestructuración del mismo antes de pasarlo {...objeto} y luego en el componente estaríamos recibiendo cada elemento de ese objeto
+
+
+---------------------------------------------------
+
+CUSTON HOOK
+
+Creamos la carpeta hooks y los creamos dentro, estos deben empezar por el nombre use y los custom hooks pueden ser creados como js o jsx dependiendo de la necesidad
+
+
+----------------------------------------------------------
+
+d}DESPLEGAR LA APP:
+
+Generamos la carpeta de distribución yarn build / npm run build
+
+Y ya se sube esta carpeta dist a sition como netlify
+
+GITHUB PAGES:
+
+Para crear una pagina con gh pages, debemos indicar en el repo que despleguemos la carpeta de dist, esto se hace así:
+
+1. se nombra la carpeta dist como docs y se hace push de la misma y ahora vamos a las config del repo, seleccionamos settings y en pages seleccionamos la rama deseada y la carpeta docs, ya que root es todo el proyecto
+
+2. ARREGLAMOS LAS RUTAS DE LA CARPETA DIST EN EL INDEX, LLAMAMOS TODAS LAS COSAS, ESTILOS Y JS CON EL PUNTO AL INICIO ./

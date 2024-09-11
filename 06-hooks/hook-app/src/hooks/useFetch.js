@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react"
 
+const localCache = { }
+
+
 export  const useFetch = (url) => {
 
     const [state, setState] = useState({
@@ -8,6 +11,13 @@ export  const useFetch = (url) => {
         hasError: false,
         error: null
     })
+
+    
+    //INDICAMOS CON USEEFFECT, COMO SE RENDERIZARA Y CUANDO LA PETICION, SE RENDDERIZARA LA PETICION CADA QUE LA URL ENTRANTE CAMBIE
+    useEffect(() => {
+        getFetch();
+    },[url]); //cargara cada que el usuario pase una nueva url
+    //DEVOLVEMOS TODO LO QUE SE MANEJO EN EL USESTATE
 
 
         //CREAMOS UNA FUNCION PARA QUE CADA QUE EL USUARIO CAMBIE LA URL, EL ESTADO DE CARGANDO SE ACTIVE, Y SE PONGA LA DATA EN NULL HASTA QUE LLEGUE LA DATA
@@ -23,6 +33,18 @@ export  const useFetch = (url) => {
 
     //CREAMOS UNA FUNCION PARA HACER LA PETICION HTTP
     const getFetch = async () => {
+
+        //SETEAMOS EL CACHE EN EL OBJETO DEL USESTATE
+        if(localCache[url]){
+            console.log("ESTAMOS USANDO LE CACHE");
+            setState({
+                data: localCache[url],
+                loading: false,
+                hasError: false,
+                error: null,
+            });
+            return;
+        }
 
         //ya que se hizo una nueva solicitud, modificamos el estado temporalmente
         setLoading();
@@ -48,16 +70,10 @@ export  const useFetch = (url) => {
             hasError: false,
             error: null,
         });
-        console.log(data);
+        //SETEAMOS LA DATA EN EL LOCALCACHE}
+        localCache[url] = data;
     }
     
-
-    //INDICAMOS CON USEEFFECT, COMO SE RENDERIZARA Y CUANDO LA PETICION, SE RENDDERIZARA LA PETICION CADA QUE LA URL ENTRANTE CAMBIE
-    useEffect(() => {
-        getFetch();
-    },[url]); //cargara cada que el usuario pase una nueva url
-    //DEVOLVEMOS TODO LO QUE SE MANEJO EN EL USESTATE
-
 
   return{
     data : state.data,

@@ -45,3 +45,59 @@ SI ESTO NO SE CUMPLE LA PRUEBA NO PASA
 !!!!PARA AYUDARNOS A AUTOCOMPLETAR ESTAS COSAS DE JEST, PODEMOS INSTALAR yarn add -D @types/jest
 
 También podríamos meter una serie de pruebas en una especie de paquete, el cual indique de donde vienen esas pruebas o de que se trata, esto se hace escribiendo describe(nameee () =>{ ACA IRIA CADA PRUEBA}
+
+
+
+-----------------------------------------------------------------------
+
+PRUEBA A UN ARCHIVO REAL
+
+Debemos crear todos los archivos que tenemos en el src en el test, cambiando la extensión a .test.js
+
+Si tenemos varios archivos de test, y deseamos que solo se corra 1, en la consola presionamos w para ver más, luego presionamos p, para filtrar por el nombre del archivo y escribimos el nombre
+
+Ahora creamos el test con su titulo y ya dentro de este llamamos la función y le asignamos sus parámetros, recordar que donde se crea la función debemos indicar con el export
+
+PARA QUE LOS EXPORTS PUEDAN FUNCIONAR, DEBIDO A QUE ES UNA FUNCIONALIDAD DE JS MODERNO, DEBEMOS IR A LA PAGINA DE JEST E INSTALAR BABEL
+
+Luego de esto en el root del proyecto, creamos un archivo llamado babel.config.cjs  y pegamos la info que está en la pagina de jest
+
+
+---------------------------------------------
+
+TOEQUAL
+
+Este sirve para verificar si 2 objetos son iguales
+
+--------------------------------------------------
+
+PROMESAS 
+
+Para probar promesas, es decir cosas asicnronas, debemos indicarle a jest, en los partentesis de test, algo que indique cuando la promesa termine, en este caso se le puede llamar done o como se desee, Y ya cuando llamemos a la promesa con el then, cuando se vaya a terminar el código e ese then se llama a la variable que se creo en los paréntesis de test: done();
+
+
+------------------------------------------------------------
+
+PROBAR COMPONENTES DE REACT:
+
+Vamos a usar Testing Library con jest, ambos en conjuntos son muy poderosos, primero vamos a Testing library y lo instalamos (yarn add --dev @testing-library/react), esto es mas que todo para realizar pruebas de la parte renderizada de la apagina, como por ejemplo clickear botones
+
+
+Una vez instalado esto, comenzamos a crear en la carpeta test nuestros archivos con .test.jsx
+
+Ahora creamos todo lo que ya sabemos, y el testing library nos trae una función, la cual debemos importar de @testing-library/react, la cual se llama render(), y dentro de los paréntesis añadimos todo lo que es el componente
+
+Para hacer que esto funcione debemos correr esto yarn add -D jest-environment-jsdom y crear el archivo jest.config.cjs y crear esto module.exports = {
+    testEnvironment : 'jest-environment-jsdom'
+}
+
+Lueogo se añade esto al babel.config
+module.exports = {
+    presets: [
+      ['@babel/present-env', {targets : { esmodules: true}}],
+      ['@babel/preset-react', {runtime: 'automatic'}]
+
+    ],
+  };
+
+y por ultimo hacemos yarn add -D @babel/preset-react
