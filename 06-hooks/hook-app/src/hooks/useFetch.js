@@ -37,6 +37,8 @@ export  const useFetch = (url) => {
         //SETEAMOS EL CACHE EN EL OBJETO DEL USESTATE
         if(localCache[url]){
             console.log("ESTAMOS USANDO LE CACHE");
+            console.log(localCache);
+            
             setState({
                 data: localCache[url],
                 loading: false,
